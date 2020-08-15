@@ -1,8 +1,8 @@
-# BLOG ROOM
+# BLOG ROOM 📖
 An interactive mobile app for blogging
-* Create Blogs
-* Comment on others blog
-* Rate Them.
+* Create Blogs :pen:
+* Comment on others blog 👓
+* Rate Them. 🌟
 
 
 ![React-Native](https://img.shields.io/badge/-React%20Native-blue?style=for-the-badge&logo=react)
