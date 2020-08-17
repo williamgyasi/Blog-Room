@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import {Button,Text,List} from 'native-base'
+import {Button,Text,List,Icon,Left,Right} from 'native-base'
 import {View,FlatList} from 'react-native'
 import BlogContext from '../Context/BlogContext'
 import BlogComponent from '../Components/BlogComponent'
@@ -14,12 +14,14 @@ const HomeScreen=()=>{
     }
     return(
         <View>
+            <Button>
+                <Icon type="FontAwesome5" name="plus-square"/>
+            </Button>
             <FlatList
             data={blogPosts.data}
             extraData={blogPosts.data}
             keyExtractor={(item,index)=>index.toString()}
             renderItem={_renderItem}
-
              />
         </View>
 
