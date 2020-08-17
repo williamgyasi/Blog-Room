@@ -1,8 +1,13 @@
-import {createContext} from 'react'
+import React,{createContext} from 'react'
 
-const blogContext=createContext()
-const userDetails=createContext()
+const BlogContext=createContext()
 
-export const BlogProvider=blogContext.Provider
-export const userDetailsProvider=userDetails.Provider
-export default blogContext
+export const BlogProvider=({children})=>{
+    return(
+        <BlogContext.Provider value={"welcome context reloaded"}>
+            {children}
+        </BlogContext.Provider>
+    )
+}
+
+export default BlogContext

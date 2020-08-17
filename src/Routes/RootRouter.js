@@ -26,7 +26,7 @@ const RootNav= RootRouter
 
 export default ()=>{
     return (
-        <BlogProvider value={"WELCOME"} >
+        <BlogProvider >
             <RootNav />
         </BlogProvider>
     )
