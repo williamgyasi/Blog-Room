@@ -11,7 +11,7 @@ const RootRouter=({})=>{
     return(
         <NavigationContainer>
             
-            <RootStack.Navigator>
+            <RootStack.Navigator screenOptions={{headerShown:false}}>
                 <RootStack.Screen name="Homescreen" component={HomeScreen} />
             </RootStack.Navigator>
         </NavigationContainer>
