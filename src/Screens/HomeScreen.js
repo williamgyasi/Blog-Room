@@ -3,6 +3,7 @@ import {Button,Text,List,Icon,Left,Right} from 'native-base'
 import {View,FlatList} from 'react-native'
 import BlogContext from '../Context/BlogContext'
 import BlogComponent from '../Components/BlogComponent'
+import {Theme} from '../../Store'
 
 const HomeScreen=()=>{
     const blogPosts=useContext(BlogContext)
@@ -14,8 +15,12 @@ const HomeScreen=()=>{
     }
     return(
         <View>
-            <Button>
-                <Icon type="FontAwesome5" name="plus-square"/>
+            <Button
+            style={{
+               backgroundColor:Theme.primaryCOlor,
+            }}
+            >
+                <Icon type="Feather" name="plus-circle"/>
             </Button>
             <FlatList
             data={blogPosts.data}
