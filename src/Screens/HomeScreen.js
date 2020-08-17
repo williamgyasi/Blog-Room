@@ -1,12 +1,15 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import {Button,Text} from 'native-base'
 import {View} from 'react-native'
+import blogContext from '../Context/BlogContext'
 
 const HomeScreen=()=>{
+    const value=useContext(blogContext)
     return(
         <View>
             <Text>
-                WELCOME TO THE HOME SCREEN
+                {value}
+                
             </Text>
         </View>
 

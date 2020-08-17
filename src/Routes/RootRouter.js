@@ -5,6 +5,9 @@ import {createStackNavigator} from '@react-navigation/stack'
 // SCREEN IMPORTS
 import HomeScreen from '../Screens/HomeScreen'
 
+//Context
+import {BlogProvider} from '../Context/BlogContext'
+
 const RootStack=createStackNavigator()
 
 const RootRouter=({})=>{
@@ -22,6 +25,10 @@ const RootRouter=({})=>{
 const RootNav= RootRouter
 
 export default ()=>{
-    return <RootNav />
+    return (
+        <BlogProvider value={"WELCOME"} >
+            <RootNav />
+        </BlogProvider>
+    )
 
 }
