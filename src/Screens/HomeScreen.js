@@ -1,16 +1,26 @@
 import React,{useContext} from 'react'
-import {Button,Text} from 'native-base'
-import {View} from 'react-native'
+import {Button,Text,List} from 'native-base'
+import {View,FlatList} from 'react-native'
 import BlogContext from '../Context/BlogContext'
+import BlogComponent from '../Components/BlogComponent'
 
 const HomeScreen=()=>{
-    const value=useContext(BlogContext)
+    const blogPosts=useContext(BlogContext)
+
+    const _renderItem=({item})=>{
+        return(
+           <BlogComponent blogdetails={item} />
+        )
+    }
     return(
         <View>
-            <Text>
-                {value}
-                
-            </Text>
+            <FlatList
+            data={blogPosts}
+            extraData={blogPosts}
+            keyExtractor={(item,index)=>index.toString()}
+            renderItem={_renderItem}
+
+             />
         </View>
 
     )
