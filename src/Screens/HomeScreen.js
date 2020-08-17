@@ -15,8 +15,8 @@ const HomeScreen=()=>{
     return(
         <View>
             <FlatList
-            data={blogPosts}
-            extraData={blogPosts}
+            data={blogPosts.data}
+            extraData={blogPosts.data}
             keyExtractor={(item,index)=>index.toString()}
             renderItem={_renderItem}
 

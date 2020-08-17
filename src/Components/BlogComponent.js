@@ -7,7 +7,7 @@ const BlogComponent =({blogdetails})=>{
     return(
         <View>
             <Text>
-                {blogdetails.title}
+                {blogdetails.length}
             </Text>
         </View>
     )
