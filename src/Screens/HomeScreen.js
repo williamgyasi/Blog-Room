@@ -14,13 +14,14 @@ const HomeScreen=()=>{
         )
     }
     return(
-        <View>
+        <View style={{flex:1}}>
             <Button
+            onPress={blogPosts.addBlogPost}
             style={{
                backgroundColor:Theme.primaryCOlor,
             }}
             >
-                <Icon type="Feather" name="plus-circle"/>
+                <Icon type="Feather" style={{color:Theme.secondaryColor}} name="plus-circle"/>
             </Button>
             <FlatList
             data={blogPosts.data}
