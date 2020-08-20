@@ -4,6 +4,8 @@ import React,{useReducer} from 'react'
 export default(reducer,actions,initialstate)=>{
     const Context=React.createContext()
 
+    //Actions on Context
+
     const Provider =({children})=>{
         const [blogPosts,dispatch]=useReducer(reducer,initialstate)
         return(
