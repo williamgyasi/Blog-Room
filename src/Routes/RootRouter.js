@@ -6,7 +6,7 @@ import {createStackNavigator} from '@react-navigation/stack'
 import HomeScreen from '../Screens/HomeScreen'
 
 //Context
-import {BlogProvider} from '../Context/BlogContext'
+import {Provider} from '../Context/BlogContext'
 
 const RootStack=createStackNavigator()
 
@@ -26,9 +26,9 @@ const RootNav= RootRouter
 
 export default ()=>{
     return (
-        <BlogProvider >
+        <Provider >
             <RootNav />
-        </BlogProvider>
+        </Provider>
     )
 
 }

@@ -1,10 +1,6 @@
 import React,{createContext,useState,useReducer} from 'react'
 import createDataContext from './createDataContext'
 
-createDataContext
-
-const BlogContext=createContext()
-
 const blogReducer=(state,action)=>{
     switch(action.type){
         case "add_blogpost":
@@ -19,7 +15,7 @@ const blogReducer=(state,action)=>{
 
 const addBlogPost=dispatch=>{
     return()=>{
-        dispatch({type:"add_blogpost",payload:blogPosts})
+        dispatch({type:"add_blogpost"})
     }
 }
 

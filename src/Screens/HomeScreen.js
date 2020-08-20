@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
 import {Button,Text,List,Icon,Left,Right} from 'native-base'
 import {View,FlatList} from 'react-native'
-import BlogContext from '../Context/BlogContext'
+import {Context} from '../Context/BlogContext'
 import BlogComponent from '../Components/BlogComponent'
 import {Theme} from '../../Store'
 
@@ -9,7 +9,7 @@ import {Theme} from '../../Store'
 import BStatusBar from '../Components/BStatusBar'
 
 const HomeScreen=()=>{
-    const blogPosts=useContext(BlogContext)
+    const blogPosts=useContext(Context)
 
     const _renderItem=({item})=>{
         return(
