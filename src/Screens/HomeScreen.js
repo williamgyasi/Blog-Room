@@ -18,6 +18,7 @@ const HomeScreen=()=>{
     }
     return(
         <View style={{flex:1}}>
+              <BStatusBar alt={false} />
             <View
              style={{
                  flexDirection:"row",
