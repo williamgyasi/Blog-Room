@@ -4,6 +4,8 @@ import {View,FlatList} from 'react-native'
 import {Context} from '../Context/BlogContext'
 import BlogComponent from '../Components/BlogComponent'
 import {Theme} from '../../Store'
+import BTopBar from '../Components/BTopBar'
+
 
 //COMPONENTS
 import BStatusBar from '../Components/BStatusBar'
@@ -19,25 +21,11 @@ const HomeScreen=()=>{
     return(
         <View style={{flex:1}}>
               <BStatusBar alt={false} />
-            <View
-             style={{
-                 flexDirection:"row",
-                 height:50,
-                 justifyContent:"flex-end",
-                 alignItems:"center"
-                 }}>
-            <Button
-            onPress={blogPosts.addBlogPost}
-            style={{
-               backgroundColor:Theme.primaryCOlor,
-
-            }}
-            >
-                <Text>ADD BLOG</Text>
-                <Icon type="Feather" style={{color:Theme.secondaryColor}} name="plus-circle"/>
-            </Button>
-
-            </View>
+              <BTopBar 
+              style={{justifyContent:"flex-end"}} 
+              onPress={blogPosts.addBlogPost}
+              iconName="plus-circle" iconType="Feather" />
+            
            
             <FlatList
             data={blogPosts.data}
