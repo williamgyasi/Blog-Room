@@ -6,11 +6,9 @@ import {Theme} from '../../Store'
 
 
 
-const BlogComponent =({blogdetails})=>{
+const BlogComponent =({blogdetails,onPress})=>{
     return(
-        <TouchableOpacity
-        onPress={()=>alert("adad")}
-         >
+        <TouchableOpacity>
             <View 
         style={{
             backgroundColor:"rgb(76,152,207)",
@@ -24,7 +22,7 @@ const BlogComponent =({blogdetails})=>{
             <Text style={{color:Theme.secondaryColor}}>
                 {blogdetails.title}
             </Text>
-            <Icon name={"trash-2"} type="Feather" style={{color:Theme.secondaryColor}} />
+            <Icon onPress={onPress} name={"trash-2"} type="Feather" style={{color:Theme.secondaryColor}} />
         </View>
 
         </TouchableOpacity>

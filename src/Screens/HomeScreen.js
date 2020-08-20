@@ -15,7 +15,7 @@ const HomeScreen=()=>{
 
     const _renderItem=({item})=>{
         return(
-           <BlogComponent blogdetails={item} />
+           <BlogComponent blogdetails={item} onPress={()=>blogPosts.deleteBlogPost(item.id)} />
         )
     }
     return(
@@ -25,8 +25,6 @@ const HomeScreen=()=>{
               style={{justifyContent:"flex-end"}} 
               onPress={blogPosts.addBlogPost}
               iconName="plus-circle" iconType="Feather" />
-            
-           
             <FlatList
             data={blogPosts.data}
             extraData={blogPosts.data}
