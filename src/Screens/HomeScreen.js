@@ -5,6 +5,9 @@ import BlogContext from '../Context/BlogContext'
 import BlogComponent from '../Components/BlogComponent'
 import {Theme} from '../../Store'
 
+//COMPONENTS
+import BStatusBar from '../Components/BStatusBar'
+
 const HomeScreen=()=>{
     const blogPosts=useContext(BlogContext)
 
@@ -15,14 +18,26 @@ const HomeScreen=()=>{
     }
     return(
         <View style={{flex:1}}>
+            <View
+             style={{
+                 flexDirection:"row",
+                 height:50,
+                 justifyContent:"flex-end",
+                 alignItems:"center"
+                 }}>
             <Button
             onPress={blogPosts.addBlogPost}
             style={{
                backgroundColor:Theme.primaryCOlor,
+
             }}
             >
+                <Text>ADD BLOG</Text>
                 <Icon type="Feather" style={{color:Theme.secondaryColor}} name="plus-circle"/>
             </Button>
+
+            </View>
+           
             <FlatList
             data={blogPosts.data}
             extraData={blogPosts.data}
