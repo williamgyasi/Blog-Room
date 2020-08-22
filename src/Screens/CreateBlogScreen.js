@@ -6,12 +6,14 @@ import {Theme} from '../../Store'
 import BTopBar from '../Components/BTopBar'
 import BStatusBar from '../Components/BStatusBar'
 import BInputText from '../Components/BInputText'
+import BCustomBackButton from '../Components/BCustomBackButton'
 
 
 const CreateBlogScreen=({route})=>{
     return(
         <View>
             <BStatusBar alt />
+            <BCustomBackButton />
             <Text>
                 WELCOME TO THE CREATE BLOG SCREEN
             </Text>
