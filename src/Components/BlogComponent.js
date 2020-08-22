@@ -3,12 +3,11 @@ import {Text,Icon} from 'native-base'
 import {View,TouchableOpacity} from 'react-native'
 import BlogContext from '../Context/BlogContext'
 import {Theme} from '../../Store'
-
-
-
-const BlogComponent =({blogdetails,onPress})=>{
+import {withNavigation} from '@react-navigation/compat'
+const BlogComponent =({blogdetails,onPress,navigation})=>{
     return(
-        <TouchableOpacity>
+        <TouchableOpacity
+        onPress={()=>navigation.navigate("ShowBlog")}>
             <View 
         style={{
             backgroundColor:"rgb(76,152,207)",
@@ -30,4 +29,4 @@ const BlogComponent =({blogdetails,onPress})=>{
     )
 }
 
-export default BlogComponent
+export default withNavigation(BlogComponent)

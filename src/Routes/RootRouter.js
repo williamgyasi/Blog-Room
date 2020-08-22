@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack'
 
 // SCREEN IMPORTS
 import HomeScreen from '../Screens/HomeScreen'
+import ShowBlogScreen from '../Screens/ShowBlogScreen'
 
 //Context
 import {Provider} from '../Context/BlogContext'
@@ -16,6 +17,7 @@ const RootRouter=({})=>{
             
             <RootStack.Navigator screenOptions={{headerShown:false}}>
                 <RootStack.Screen name="Homescreen" component={HomeScreen} />
+                <RootStack.Screen name="ShowBlog" component={ShowBlogScreen} />
             </RootStack.Navigator>
         </NavigationContainer>
     )

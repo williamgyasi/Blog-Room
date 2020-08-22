@@ -18,3 +18,5 @@ const ShowBlogScreen=({item})=>{
         </View>
     )
 }
+
+export default ShowBlogScreen
