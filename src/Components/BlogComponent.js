@@ -7,7 +7,9 @@ import {withNavigation} from '@react-navigation/compat'
 const BlogComponent =({blogdetails,onPress,navigation})=>{
     return(
         <TouchableOpacity
-        onPress={()=>navigation.navigate("ShowBlog")}>
+        onPress={()=>navigation.navigate("ShowBlog",{
+            selectedBlog:blogdetails
+        })}>
             <View 
         style={{
             backgroundColor:"rgb(76,152,207)",
