@@ -4,6 +4,7 @@ import {View,TouchableOpacity} from 'react-native'
 import BlogContext from '../Context/BlogContext'
 import {Theme} from '../../Store'
 import {withNavigation} from '@react-navigation/compat'
+
 const BlogComponent =({blogdetails,onPress,navigation})=>{
     return(
         <TouchableOpacity

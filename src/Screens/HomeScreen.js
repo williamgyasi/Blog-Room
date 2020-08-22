@@ -10,7 +10,7 @@ import BTopBar from '../Components/BTopBar'
 //COMPONENTS
 import BStatusBar from '../Components/BStatusBar'
 
-const HomeScreen=()=>{
+const HomeScreen=({navigation})=>{
     const blogPosts=useContext(Context)
 
     const _renderItem=({item})=>{
@@ -23,7 +23,8 @@ const HomeScreen=()=>{
               <BStatusBar alt={false} />
               <BTopBar 
               style={{justifyContent:"flex-end"}} 
-              onPress={blogPosts.addBlogPost}
+            //   onPress={blogPosts.addBlogPost}
+            onPress={()=>navigation.navigate("createBlog")}
               iconName="plus-circle" iconType="Feather" />
             <FlatList
             data={blogPosts.data}

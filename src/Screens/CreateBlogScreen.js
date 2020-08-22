@@ -1,29 +1,24 @@
 import React,{useContext} from 'react'
 import {View,Text} from 'native-base'
-
 import {Context} from '../Context/BlogContext'
-
 //RE-USABLE COMPONENTS
 import {Theme} from '../../Store'
 import BTopBar from '../Components/BTopBar'
 import BStatusBar from '../Components/BStatusBar'
 
 
-const ShowBlogScreen=({route})=>{
-    const {selectedBlog}=route.params
-    const {data}=useContext(Context)
-
+const CreateBlogScreen=({route})=>{
     return(
         <View>
             <BStatusBar alt />
             <Text>
-                WELCOME TO THE {selectedBlog.title}
+                WELCOME TO THE CREATE BLOG SCREEN
             </Text>
             <Text>
-                WELCOME TO THE {selectedBlog.id}
+               WELCOME TO THE OTHER CREATE BLOG SCREEN
             </Text>
         </View>
     )
 }
 
-export default ShowBlogScreen
+export default CreateBlogScreen
