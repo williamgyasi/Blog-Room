@@ -5,6 +5,7 @@ import {Context} from '../Context/BlogContext'
 import {Theme} from '../../Store'
 import BTopBar from '../Components/BTopBar'
 import BStatusBar from '../Components/BStatusBar'
+import BInputText from '../Components/BInputText'
 
 
 const CreateBlogScreen=({route})=>{

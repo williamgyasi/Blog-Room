@@ -15,8 +15,8 @@ const RootStack=createStackNavigator()
 const RootRouter=({})=>{
     return(
         <NavigationContainer>
-            <RootStack.Navigator screenOptions={{headerShown:false}}>
-                <RootStack.Screen name="Homescreen" component={HomeScreen} />
+            <RootStack.Navigator initialRouteName="homescreen" screenOptions={{headerShown:false}}>
+                <RootStack.Screen name="homescreen" component={HomeScreen} />
                 <RootStack.Screen name="ShowBlog" component={ShowBlogScreen} />
                 <RootStack.Screen name="createBlog" component={CreateBLogScreen} />
             </RootStack.Navigator>
