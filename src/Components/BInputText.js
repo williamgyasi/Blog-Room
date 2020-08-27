@@ -3,14 +3,19 @@ import { View, Button, Icon } from 'native-base'
 import {Text,TextInput} from 'react-native'
 // import {HelperText} from 'react-native-paper'
 
-const BInputText=({...props})=>{
+const BInputText=({value,onTextChanged,...style})=>{
     return(
-        <View>
-           <Button>
-               <Icon type="Feather" name={"chevron-left"} />
-           </Button>
-           {/* <HelperText /> */}
-        </View>
+       <TextInput
+       style={{
+           borderWidth:1,
+           borderRadius:10,
+           fontSize:20,
+           marginTop:10,
+           ...style
+       }}
+       value={value}
+       onChangeText={onTextChanged}
+        />
     )
 
 }
