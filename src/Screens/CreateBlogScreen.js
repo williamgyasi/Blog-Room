@@ -13,9 +13,10 @@ import BIconButton from '../Components/BIconButton'
 const {width,height}=Dimensions.get('window')
 
 
-const CreateBlogScreen=({route})=>{
+const CreateBlogScreen=({route,navigation})=>{
     const [title,setTitle]=useState('')
     const [content,setContent]=useState('')
+    const {addBlogPost}=useContext(Context)
     return(
         <View>
             <BStatusBar alt />
@@ -40,11 +41,11 @@ const CreateBlogScreen=({route})=>{
 
             </View>
             <BIconButton 
+            onPress={()=>addBlogPost(content,title,()=>{navigation.goBack()})}
             width={width*0.5} 
             style={{
                 justifyContent:"center",
-                
-                marginHorizontal:width/4.5,
+                marginHorizontal:width/4.0,
                 marginTop:30,
             }}
             alt 

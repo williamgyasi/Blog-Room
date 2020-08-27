@@ -4,11 +4,12 @@ import {Theme} from '../../Store'
 import {TouchableOpacity} from 'react-native'
 
 
-const BIconButton=({buttonName,iconName,iconType,style,alt,width})=>{
+const BIconButton=({buttonName,iconName,iconType,style,alt,width,onPress})=>{
     const dark=alt?Theme.primaryCOlor:Theme.secondaryColor
     const iconTheme=alt?"white":"black"
     return(
        <TouchableOpacity
+       onPress={onPress}
        style={{
            ...style,
            flexDirection:"row",
