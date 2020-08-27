@@ -9,9 +9,10 @@ import BTopBar from '../Components/BTopBar'
 import BStatusBar from '../Components/BStatusBar'
 
 
-const ShowBlogScreen=({route,navigation})=>{
-    const {selectedBlog}=route.params
+const ShowBlogScreen=({route,navigation})=>{    const {blogID}=route.params
     const {data}=useContext(Context)
+
+    const selectedBlog=data.find(value=>value.id===blogID)
 
     return(
         <View>

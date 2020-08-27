@@ -9,7 +9,7 @@ const BlogComponent =({blogdetails,onPress,navigation})=>{
     return(
         <TouchableOpacity
         onPress={()=>navigation.navigate("ShowBlog",{
-            selectedBlog:blogdetails
+            blogID:blogdetails.id
         })}>
             <View 
         style={{
