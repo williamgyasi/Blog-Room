@@ -41,7 +41,7 @@ const CreateBlogScreen=({route,navigation})=>{
 
             </View>
             <BIconButton 
-            onPress={()=>addBlogPost(content,title,()=>{navigation.goBack()})}
+            onPress={()=>addBlogPost(title,content,()=>{navigation.goBack()})}
             width={width*0.5} 
             style={{
                 justifyContent:"center",

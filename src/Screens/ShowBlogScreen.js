@@ -16,7 +16,9 @@ const ShowBlogScreen=({route,navigation})=>{
     return(
         <View>
             <BStatusBar />
-            <BTopBar onPress={()=>navigation.navigate("editBlog")} iconType="Feather" iconName="edit" style={{justifyContent:"flex-end"}} />
+            <BTopBar onPress={()=>navigation.navigate("editBlog",{
+                selectedBlog
+            })} iconType="Feather" iconName="edit" style={{justifyContent:"flex-end"}} />
             <Text>
                 WELCOME TO THE {selectedBlog.title}
             </Text>
