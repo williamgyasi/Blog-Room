@@ -14,12 +14,15 @@ const CreateBlogScreen=({route})=>{
         <View>
             <BStatusBar alt />
             <BCustomBackButton />
-            <Text>
-                WELCOME TO THE CREATE BLOG SCREEN
-            </Text>
-            <Text>
-               WELCOME TO THE OTHER CREATE BLOG SCREEN
-            </Text>
+            <View
+            style={{
+                marginTop:10,
+                padding:10,
+                
+            }}
+            >
+                <Text>Blog Title</Text>
+            </View>
         </View>
     )
 }
