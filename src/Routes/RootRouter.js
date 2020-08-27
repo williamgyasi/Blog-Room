@@ -6,6 +6,7 @@ import {createStackNavigator} from '@react-navigation/stack'
 import HomeScreen from '../Screens/HomeScreen'
 import ShowBlogScreen from '../Screens/ShowBlogScreen'
 import CreateBLogScreen from '../Screens/CreateBlogScreen'
+import EditBlogPost from '../Screens/EditBlogPost'
 
 //Context
 import {Provider} from '../Context/BlogContext'
@@ -19,6 +20,7 @@ const RootRouter=({})=>{
                 <RootStack.Screen name="homescreen" component={HomeScreen} />
                 <RootStack.Screen name="ShowBlog" component={ShowBlogScreen} />
                 <RootStack.Screen name="createBlog" component={CreateBLogScreen} />
+                <RootStack.Screen name="editBlog" component={EditBlogPost} />
             </RootStack.Navigator>
         </NavigationContainer>
     )

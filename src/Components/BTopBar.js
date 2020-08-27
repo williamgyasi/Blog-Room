@@ -10,12 +10,15 @@ const BTopBar =({style,onPress,iconName,iconType,barName})=>{
             height:45,
             alignItems:"center",
             flexDirection:"row",
+            
             ...style
             }}>
        <Button
        onPress={onPress}
+       
        style={{
           backgroundColor:Theme.primaryCOlor,
+          borderBottomStartRadius:10,
        }}
        >
            {/* <Text>{barName}</Text> */}
