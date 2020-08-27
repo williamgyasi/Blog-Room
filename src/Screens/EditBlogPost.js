@@ -22,7 +22,10 @@ const EditBlogPost=({route,navigation})=>{
             <BTopBar 
             goBack={()=>navigation.goBack()} 
             isLeftIcon 
-            onPress={()=>{editBlogPost(id,title,content)}}
+            onPress={()=>{
+                editBlogPost(id,title,content,()=>navigation.pop())
+             
+            }}
             iconName={"check"} 
             iconType={"Feather"} 
             style={{justifyContent:"space-between"}}
