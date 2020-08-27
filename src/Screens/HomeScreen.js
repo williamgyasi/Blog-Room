@@ -23,9 +23,12 @@ const HomeScreen=({navigation})=>{
               <BStatusBar alt={false} />
               <BTopBar 
               style={{justifyContent:"flex-end"}} 
-            //   onPress={blogPosts.addBlogPost}
-            onPress={()=>navigation.navigate("createBlog")}
+              onPress={()=>navigation.navigate("createBlog")}
               iconName="plus-circle" iconType="Feather" />
+
+
+
+
             <FlatList
             data={blogPosts.data}
             extraData={blogPosts.data}

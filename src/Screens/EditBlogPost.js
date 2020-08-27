@@ -12,6 +12,7 @@ import BTopBar from '../Components/BTopBar'
 const EditBlogPost=({route,navigation})=>{
     const{id}=route.params.selectedBlog
     const {data,editBlogPost} =useContext(Context)
+    
     const blogPost=data.find(blog=>blog.id===id)
     const [title,setTitle] =useState(blogPost.title)
     const [content,setContent] =useState(blogPost.content)
@@ -21,7 +22,7 @@ const EditBlogPost=({route,navigation})=>{
             <BTopBar 
             goBack={()=>navigation.goBack()} 
             isLeftIcon 
-            onPress={()=>{editBlogPost(id,title,content,()=>navigation.goBack())}}
+            onPress={()=>{editBlogPost(id,title,content)}}
             iconName={"check"} 
             iconType={"Feather"} 
             style={{justifyContent:"space-between"}}
@@ -35,7 +36,7 @@ const EditBlogPost=({route,navigation})=>{
                 <Text style={styles.inputText}>BLOG CONTENT</Text>
             <BInputText 
                 value={content}
-                onTextChanged={text=>Content(text)}
+                onTextChanged={text=>setContent(text)}
             />
             </View>
         </View>

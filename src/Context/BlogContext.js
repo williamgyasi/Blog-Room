@@ -17,8 +17,13 @@ const blogReducer=(state,action)=>{
             return state.filter(blogPost=>blogPost.id !==action.payload)
         case "edit_blogpost":
            return state.map(element=>{
-               element["title"]=action.payload?.title
-               element["content"]=action.payload?.content
+               if(element.id===action.payload?.id){
+                   action.payload
+               }
+               else{
+                   return element
+               }
+              
            })
         default:
             return state;
@@ -43,7 +48,6 @@ const deleteBlogPost=dispatch=>{
 const editBlogPost=dispatch=>{
     return (id,title,content,callback)=>{
         dispatch({type:"edit_blogpost",payload:{id,title,content}})
-        callback()
     }
 }
 
