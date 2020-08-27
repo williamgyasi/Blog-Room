@@ -1,6 +1,7 @@
-import React from 'react'
+import React,{useState,useContext} from 'react'
 import {View,TextInput,StyleSheet} from 'react-native'
 import { Text } from 'native-base'
+import {Context} from '../Context/BlogContext'
 
 //REUSABLE COMPONENT
 import BInputText from '../Components/BInputText'
@@ -9,12 +10,19 @@ import BTopBar from '../Components/BTopBar'
 
 
 const EditBlogPost=({route,navigation})=>{
-    const{title,content,id}=route.params.selectedBlog
+    const{id}=route.params.selectedBlog
+    const {data,editBlogPost} =useContext(Context)
+    const blogPost=data.find(blog=>blog.id===id)
+    const [title,setTitle] =useState(blogPost.title)
+    const [content,setContent] =useState(blogPost.content)
+    
     return(
         <View>
-            <BTopBar goBack={()=>navigation.goBack()} 
-            isLeftIcon iconName={"check"} 
-            
+            <BTopBar 
+            goBack={()=>navigation.goBack()} 
+            isLeftIcon 
+            onPress={()=>{editBlogPost(id,title,content,()=>navigation.goBack())}}
+            iconName={"check"} 
             iconType={"Feather"} 
             style={{justifyContent:"space-between"}}
              barName={"Edit Blog"}/>
@@ -27,12 +35,9 @@ const EditBlogPost=({route,navigation})=>{
                 <Text style={styles.inputText}>BLOG CONTENT</Text>
             <BInputText 
                 value={content}
-                onTextChanged={text=>setTitle(text)}
+                onTextChanged={text=>Content(text)}
             />
-
             </View>
-           
-
         </View>
     )
 }
